@@ -1,0 +1,208 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        overflow: auto; /* Add overflow: auto to enable scrolling */
+    }
+
+    .cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .max-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .globalSolution {
+        color: #ffffff;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center; /* Adicione essa linha para centralizar as colunas no grid */
+    }
+
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Adicione essa linha para centralizar os itens na coluna */
+        text-align: center;
+    }
+
+    .titulo-1 {
+        text-align: center;
+        color: #89ffdb;
+    }
+
+    .reflexoBrancoImg {
+        width: 100%;
+    }
+
+    .reflexoBranco {
+        border: 3px solid #89ffdb;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        background-color: #89ffdb2e;
+    }
+
+    .reflexoBrancoTexto {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .reflexoBrancoImgContainer {
+        padding: 0;
+    }
+
+    .imagCarosel-container {
+        width: 70%; /* ou outra largura desejada */
+        margin: 0 auto !important; /* centraliza o carrossel */
+        padding: 30px;
+    }
+
+    .carousel-inner {
+        width: 36% !important;
+        left: 32% !important;
+    }
+
+    .tituloDesenvolvedores {
+        color: #89ffdb;
+        text-align: center;
+    }
+
+    .itensLista {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+
+<div class="cover">
+    <img class="max-img" src="~/assets/Background.png" alt="Imagem de background" />
+</div>
+
+<div class="container mt-5">
+    <!-- Sessão de Texto 1 -->
+    <div class="row globalSolution">
+        <div class="col">
+            <h2 class="titulo-1">IrisCare Solutions </h2>
+            <p>
+                Versão simplificada para desktop do aplicativo mobile para prevenção e controle do Retinoblastoma por meio da análise de imagem, controle periodico e encaminhamento para Secretaria Municipal e GRAACC. <br /> <br />
+                O retinoblastoma é um câncer que acomete crianças pequenas, é mais comum em bebês e aproximadamente 90% dos casos são descobertos abaixo dos 5 anos. É um tumor maligno que se desenvolve na retina, uma parte interna dos olhos. De acordo com o GRAACC, a doença pode se apresentar em um olho (60% dos casos, o chamado retinoblastoma unilateral) ou nos 2 olhos (40% dos casos, retinoblastoma bilateral) que ocorrem no primeiro ano de vida.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sessão de Texto 2 -->
+    <div class="grid-container">
+        <div class="grid-item mt-4 reflexoBranco">
+            <div class="reflexoBrancoImgContainer">
+                <img class="reflexoBrancoImg" src="~/assets/kid_eye.png" />
+            </div>
+            <div class="reflexoBrancoTexto">
+                <h2>“Olho de gato” </h2>
+                <p>
+                    Sabe quando a gente tira uma foto com flash e sai com as pupilas vermelhas? Esse reflexo vermelho é normalmente associado a um olho normal e saudável. Porém, em pacientes com retinoblastoma, é muito comum que o reflexo volte branco ou amarelado, o que os médicos chamam de LEUCOCORIA, o “reflexo pupilar branco”. <br />
+                    <br />
+                </p>
+            </div>
+        </div>
+
+        <!-- Sessão de Texto 3 -->
+        <div class="grid-item mt-4 reflexoBranco">
+            <div class="reflexoBrancoImgContainer">
+                <img class="reflexoBrancoImg" src="~/assets/kid_eye_2.png" />
+            </div>
+            <div class="reflexoBrancoTexto">
+                <h2>Estrabismo</h2>
+                <p>
+                    Popularmente dizemos que a criança está vesguinha. Isso é o estrabismo. É uma condição na qual os olhos não parecem olhar na mesma direção. Existem várias causas para o estrabismo e ele está associado a vários problemas oculares. Ele também pode ser um indicativo de RETINOBLASTOMA
+                </p>
+            </div>
+        </div>
+
+        <!-- Sessão de Texto 4 -->
+        <div class="grid-item mt-4 reflexoBranco">
+            <div class="reflexoBrancoImgContainer">
+                <img class="reflexoBrancoImg" src="~/assets/kid_eye_3.png" />
+            </div>
+            <div class="reflexoBrancoTexto">
+                <h2>Outros sinais</h2>
+                <ul class="itensLista">
+                    <li>Diminuição de visão </li>
+                    <li>Movimentos irregulares dos olhos</li>
+                    <li>Dor nos olhos</li>
+                    <li>Vermelhidão da parte branca dos olhos</li>
+                    <li>Cor diferente de cada íris</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrossel -->
+    <div class="row mt-4 imagCarosel-container">
+        <h2 class="tituloDesenvolvedores">Desenvolvedores</h2>
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100 imagCarosel" src="~/assets/Jaelson.png" alt="Primeiro slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imagCarosel" src="~/assets/Nathalia.png" alt="Segundo slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imagCarosel" src="~/assets/Marcos.png" alt="Terceiro slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imagCarosel" src="~/assets/Rafaela.png" alt="Quarto slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imagCarosel" src="~/assets/Vinicius.png" alt="Quinto slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
